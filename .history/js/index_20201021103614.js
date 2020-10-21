@@ -104,12 +104,12 @@
         var dataNUm = -1;
         // 打字机效果
         var timer = setInterval(function(){
-            if(dataNUm < everydayTxt[rand].cont.length){
+            if(dataNUm < res.data[rand].cont.length){
                 dataNUm++;
-                $(".everyday").append(everydayTxt[rand].cont.slice(dataNUm,dataNUm+1))
+                $(".personTxt").append(res.data[rand].cont.slice(dataNUm,dataNUm+1))
             }else{
                 clearInterval(timer);
             }
-        }, 80);
+        }, 150);
     }();
 });

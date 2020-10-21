@@ -106,10 +106,10 @@
         var timer = setInterval(function(){
             if(dataNUm < everydayTxt[rand].cont.length){
                 dataNUm++;
-                $(".everyday").append(everydayTxt[rand].cont.slice(dataNUm,dataNUm+1))
+                $(".personTxt").append(everydayTxt[rand].cont.slice(dataNUm,dataNUm+1))
             }else{
                 clearInterval(timer);
             }
-        }, 80);
+        }, 150);
     }();
 });

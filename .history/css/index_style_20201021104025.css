@@ -226,10 +226,9 @@ img {
 }
 
 .logo a {
-	font-family: cursive;
-    color: #686967;
-    text-decoration: none;
-    font-size: 26px;
+	font-family: BarbaraHand;
+	color: #686967;
+	text-decoration: none
 }
 
 .navgation_open .logo {
@@ -311,8 +310,7 @@ img {
 }
 .page1 .everyday{
 	width: 34%;
-	margin: 20px auto;
-	color: beige;
+    margin: 20px auto;
 }
 .page1 .nav .btn {
 	padding: 10px 40px;

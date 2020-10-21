@@ -110,6 +110,6 @@
             }else{
                 clearInterval(timer);
             }
-        }, 80);
+        }, 150);
     }();
 });

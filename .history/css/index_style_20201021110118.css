@@ -263,7 +263,7 @@ img {
 	height: 100vh;
 	padding: 0;
 	background-color: #151515;
-	background-image: url(https://visualhunt.com/photos/1/sunset-scenery-landscape-nature-plain-oregon.jpg);
+	background-image: url("../image/titleBg.jpeg");
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat
