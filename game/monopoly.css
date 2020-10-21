@@ -1,0 +1,630 @@
+/*全局设定*/
+*{margin: 0;padding: 0;font-family: Comic Sans MS, 微软雅黑;}
+li{list-style-type: none;}
+html{
+	width:100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+	user-select: none;
+	overflow: hidden;
+}
+/*设置选项*/
+.setting{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.8);
+	z-index: 9999;
+}
+/*人数*/
+.choosebox{
+	position: absolute;
+	width:400px;
+	height: 300px;
+	background: #e1e1e1;
+	top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 13px;
+}
+.choosebox h1{
+	text-align: center;
+	color: #fff;
+	background: #454545;
+	font-size: 26px;
+	line-height: 26px;
+	padding: 26px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.choosebox ul{
+	width: 100%;
+	height: calc(100% - 78px);
+}
+.choosebox li{
+	float: left;
+	width: 50%;
+	height: 50%;
+	text-align: center;
+	font-size: 26px;
+	line-height: 111px;
+	color: #454545;
+	cursor: pointer;
+	box-shadow: .5px .5px .5px inset #454545,-.5px -.5px .5px inset #454545;
+}
+.choosebox li:hover{
+	background: #ccc;
+}
+.choosebox li:nth-of-type(3){
+	border-bottom-left-radius: 13px
+}
+.choosebox li:nth-of-type(4){
+	border-bottom-right-radius: 13px
+}
+/*选角*/
+.choosechr{
+	width:700px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #e1e1e1;
+	border-radius: 13px;
+}
+.choosechr>h1{
+	text-align: center;
+	color: #fff;
+	background: #454545;
+	font-size: 26px;
+	line-height: 26px;
+	padding: 13px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.choosechr ul{
+	width: 100%;
+	height: calc(100% - 52px);
+}
+.choosechr ul h1{
+	font-size: 13px;
+	text-align: center;
+	box-shadow:0 2em #42AFE1 inset;
+	color: #fff;
+}
+.choosechr li{
+	float: left;
+	width:100px;
+	height: 100%;
+	position: relative;
+}
+.choosechr img{
+	width:80%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.choosechr li>img:hover{
+	width: 95%;
+	cursor: pointer;
+	transition: .3s;
+}
+.arrow img{
+	top: 90%;
+	width:13px;
+	animation: arrow 1s infinite;
+}
+.choosechr{
+	visibility: hidden;
+}
+/*地图*/
+.map{
+	position: absolute;
+	left:0%;
+	top:0%;
+	width:100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	grid-template-rows: repeat(5,1fr);
+	grid-gap:3px;
+	overflow: hidden;
+}
+.box{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	color:#fff;
+	box-shadow: 1px 1px 1px inset #454545,1px -1px 1px inset #454545,-1px 1px 1px inset #454545, -1px -1px 1px inset #454545;
+	background: #fff;
+	text-align: center;
+	border-radius: 13px;
+}
+.box h3{
+	font-weight: 100;
+	position: absolute;
+	top:0;
+	left:0;
+	font-size: 20px;
+	width:100%;
+	height: 30px;
+	border-top-right-radius: 13px;
+	border-top-left-radius: 13px;
+	background: #454545;
+}
+
+/*掷骰子区*/
+.control{
+	width:200px;
+	height:200px;
+	border-radius: 50%;
+	box-shadow: 4px 4px 4px #999 inset, -4px -4px 4px #999 inset, 4px -4px 4px #999 inset, -4px 4px 4px #999 inset,2px 2px 2px #666,-2px 2px 2px #666,2px -2px 2px #666,-2px -2px 2px #666;
+	background: #fff;
+	position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.control h1{
+	visibility:hidden;
+	position: absolute;
+	top:-2em;
+	left:50%;
+    transform: translateX(-50%);
+    background: #f17c67;
+    padding: 5px 13px;
+    color:#fff;
+    border-radius: 13px;
+    z-index: 1;
+    font-size: 26px;
+    text-align: center;
+    white-space: nowrap;
+}
+.dice{
+    width: 100px;
+    height: 100px;
+    background-image: url(img/1.jpg);
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius: 25%;
+    transform: translate(-50%,-50%);
+}
+.bet{
+	width:100%;
+	height: 100%;
+	background: rgba(0,0,0,.91);
+	visibility: hidden;
+}
+.spcontrol{
+	width:200px;
+	height:200px;
+	border-radius: 50%;
+	box-shadow: 4px 4px 4px #999 inset, -4px -4px 4px #999 inset, 4px -4px 4px #999 inset, -4px 4px 4px #999 inset,2px 2px 2px #666,-2px 2px 2px #666,2px -2px 2px #666,-2px -2px 2px #666;
+	background: #fff;
+	position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.spdice{
+    width: 100px;
+    height: 100px;
+    background-image: url(img/1.jpg);
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius: 25%;
+    transform: translate(-50%,-50%);
+}
+/*定义角色位置*/
+.character{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 10%;
+	height: 14%;
+}
+.character img{
+	width:45%;
+	position: relative; 
+	z-index: 1;
+}
+.chr{
+	width:85%;
+	position: absolute;
+	bottom:5%;
+    left:50%;
+    transform: translateX(-50%);
+    animation: moving .8s;
+	z-index: 1;
+}
+/*弹窗*/
+.purchasebox, .upgradebox{
+	width:800px;
+	height: 300px;
+	border-radius: 13px;
+	position: absolute;
+	background: #fff;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	border:3px solid #454545;
+	visibility: hidden;
+}
+.infobox{
+	width:200px;
+	height: 300px;
+	border-radius: 13px;
+	position: absolute;
+	background: #e1e1e1;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	border:3px solid #454545;
+	visibility: hidden;
+}
+.infobox ul{
+	width:100%;
+	height: 80%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	position: absolute;
+	top:20%;
+	left: 0;
+}
+.infobox li{
+	display: block;
+	width:calc(100% - 20px);
+	padding: 10px;
+}
+.btn1{
+	background: #e1e1e1;
+	width: 50%;
+	height: 20%;
+	position: absolute;
+	bottom: 0%;
+	left:0%;
+	text-align: center;
+	border-bottom-left-radius: 8px;
+	line-height: 60px;
+}
+.btn2{
+	background: #e1e1e1;
+	width: 50%;
+	height: 20%;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	text-align: center;
+	border-bottom-right-radius: 8px;
+	line-height: 60px;
+}
+.btn1:hover,.btn2:hover{
+	background: silver;
+	cursor: pointer;
+}
+.bar{
+	position: absolute;
+	top: 0;
+	width:100%;
+	height: 20%;
+	border-top-left-radius: 8px;        	
+	border-top-right-radius: 8px;
+	background: #454545;     	
+}
+.bar h2{
+	position: absolute;
+	top:50%;
+	left:8%;
+	color:#fff;
+	font-size: 20px;
+	letter-spacing: 13px;
+	transform: translateY(-50%);
+}
+.purchasebox h1,.upgradebox h1{
+	width:100%;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	font-size: 39px;
+	color:#454545;
+	text-align: center;
+}
+.msgbox{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+.msgbox .msg{
+	position: absolute;
+	left:50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	border:3px solid silver;
+	color:#333;
+	border-radius: 20px;
+	font-weight: 100;
+	font-size: 26px;
+	padding: 1em 3em;
+	background: #f1f1f1;
+	white-space: nowrap;
+}
+/*显示信息*/
+.p1info{
+	position: absolute;
+	top: 20%;
+	left:10%;
+	width:10%;
+	height: 20%;
+	white-space: nowrap;
+}
+.p1info h1{
+	position: absolute;
+	left:3%;
+	top: 3%;
+	padding: 5px 13px;
+	border-radius: 13px;
+	color: #fff;
+}
+.p1info h2{
+	position: absolute;
+	left:5%;
+	top:calc(3% + 2em + 10px);
+	color: #454545;
+	font-size: 24px;
+}
+.p2info{
+	position: absolute;
+	bottom: 20%;
+	left:10%;
+	width:10%;
+	height: 20%;
+	white-space: nowrap;
+}
+.p2info h1{
+	position: absolute;
+	left:3%;
+	bottom: 3%;
+	padding: 5px 13px;
+	border-radius: 13px;
+	color: #fff;
+}
+.p2info h2{
+	position: absolute;
+	left:5%;
+	bottom: calc(3% + 2em + 10px);
+	color: #454545;
+	font-size: 24px;
+}
+.p3info{
+	position: absolute;
+	top: 20%;
+	right:10%;
+	width:10%;
+	height: 20%;
+	white-space: nowrap;
+}
+.p3info h1{
+	position: absolute;
+	right:3%;
+	top: 3%;
+	padding: 5px 13px;
+	border-radius: 13px;
+	color: #fff;
+}
+.p3info h2{
+	position: absolute;
+	right:5%;
+	top:calc(3% + 2em + 10px);
+	color: #454545;
+	font-size: 24px;
+}
+.p4info{
+	position: absolute;
+	bottom: 20%;
+	right:10%;
+	width:10%;
+	height: 20%;
+	white-space: nowrap;
+}
+.p4info h1{
+	position: absolute;
+	right:3%;
+	bottom: 3%;
+	padding: 5px 13px;
+	border-radius: 13px;
+	color: #fff;
+}
+.p4info h2{
+	position: absolute;
+	right:5%;
+	font-size: 24px;
+	bottom:calc(3% + 2em + 10px);
+	color: #454545;
+}
+.p1info .chr{
+	position: absolute;
+	width:50%;
+	left: 0;
+	transform: none;
+	top:calc(3% + 2em + 60px);
+}
+.p2info .chr{
+	position: absolute;
+	width:50%;
+	left: 0;
+	transform: none;
+	bottom:calc(3% + 2em + 60px);
+}
+.p3info .chr{
+	position: absolute;
+	width:50%;
+	right: 0;
+	transform: none;
+	top:calc(3% + 2em + 60px);
+}
+.p4info .chr{
+	position: absolute;
+	width:50%;
+	right: 0;
+	transform: none;
+	bottom:calc(3% + 2em + 60px);
+}
+/*施工*/
+.construct img{
+	position: absolute;
+	z-index: 5;
+}
+.construct img:first-child{
+	width:100%;
+	bottom: 0%;
+	left:50%;
+	transform: translateX(-50%);
+	animation: c1 2s;
+}
+.construct img:nth-child(2){
+	width:100%;
+	bottom: 3%;
+	right: -30%;
+	animation: c2 2s;
+}
+.construct img:nth-child(3){
+	width:100%;
+	bottom: 3%;
+	left: -30%;
+	animation: c3 2s;
+}
+.construct img:nth-child(4){
+	width:50%;
+	bottom: 30%;
+	right: 0%;
+	transform: rotate(-45deg);
+	animation: c4 2s;
+}
+.construct img:nth-child(5){
+	width:180%;
+	bottom: -13%;
+	left: -30%;
+	animation: c5 2s;
+}
+/*房子*/
+.box img.house{
+	position: absolute;
+	bottom:5%;
+	left: 50%;
+	transform: translateX(-50%);
+	width:90%;
+}
+/*隐藏*/
+.hide{display: none;}
+/*动画都在这里*/
+@keyframes arrow{
+	0%{
+		top:89%;
+	}
+	50%{
+		top:93%;
+	}
+	100%{
+		top:89%;
+	}
+}
+@keyframes moving{
+	0%{
+		width:85%;
+	}
+	50%{
+		width:100%;
+	}
+	100%{
+		width:85%;
+	}
+}
+@keyframes c1{
+	0%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@keyframes c2{
+	0%{
+		opacity: 0;
+		right: -100%;
+	}
+	80%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		right: -30%;
+	}
+}
+@keyframes c3{
+	0%{
+		opacity: 0;
+		left: -100%;
+	}
+	80%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		left: -30%;
+	}
+}
+@keyframes c4{
+	0%{
+		opacity: 0;
+		transform: rotate(-45deg);
+	}
+	20%{
+		opacity: 1;
+		transform: rotate(-45deg);
+	}
+	40%{
+		transform: rotate(-90deg);
+	}
+	60%{
+		transform: rotate(-45deg);
+	}
+	80%{
+		opacity: 1;
+		transform: rotate(-90deg);
+	}
+	100%{
+		opacity: 0;
+		transform: rotate(-45deg);
+	}
+}
+@keyframes c5{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}

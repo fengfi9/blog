@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Get rich!</title>
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<link rel="stylesheet" href="monopoly.css">
+</head>
+<body>
+	<!-- 游戏设置区域 -->
+	<div class="setting">
+		<div class="choosechr">
+			<h1>请选择 Player 4</h1>
+			<ul>
+				<li><img class="" src="img/batman.png" alt=""><h1>Batman</h1></li>
+				<li><img class="" src="img/superman.png" alt=""><h1>Superman</h1></li>
+				<li><img class="" src="img/green lantern.png" alt=""><h1>Green Lantern</h1></li>
+				<li><img class="" src="img/robin.png" alt=""><h1>Robin</h1></li>
+				<li><img class="" src="img/catwoman.png" alt=""><h1>Catwoman</h1></li>
+				<li><img class="" src="img/harley quinn.png" alt=""><h1>Harley Quinn</h1></li>
+				<li><img class="" src="img/joker.png" alt=""><h1>Joker</h1></li>
+			</ul>
+		</div>
+		<div class="choosechr">
+			<h1>请选择 Player 3</h1>
+			<ul>
+				<li><img class="" src="img/batman.png" alt=""><h1>Batman</h1></li>
+				<li><img class="" src="img/superman.png" alt=""><h1>Superman</h1></li>
+				<li><img class="" src="img/green lantern.png" alt=""><h1>Green Lantern</h1></li>
+				<li><img class="" src="img/robin.png" alt=""><h1>Robin</h1></li>
+				<li><img class="" src="img/catwoman.png" alt=""><h1>Catwoman</h1></li>
+				<li><img class="" src="img/harley quinn.png" alt=""><h1>Harley Quinn</h1></li>
+				<li><img class="" src="img/joker.png" alt=""><h1>Joker</h1></li>
+			</ul>
+		</div>
+		<div class="choosechr">
+			<h1>请选择 Player 2</h1>
+			<ul>
+				<li><img class="" src="img/batman.png" alt=""><h1>Batman</h1></li>
+				<li><img class="" src="img/superman.png" alt=""><h1>Superman</h1></li>
+				<li><img class="" src="img/green lantern.png" alt=""><h1>Green Lantern</h1></li>
+				<li><img class="" src="img/robin.png" alt=""><h1>Robin</h1></li>
+				<li><img class="" src="img/catwoman.png" alt=""><h1>Catwoman</h1></li>
+				<li><img class="" src="img/harley quinn.png" alt=""><h1>Harley Quinn</h1></li>
+				<li><img class="" src="img/joker.png" alt=""><h1>Joker</h1></li>
+			</ul>
+		</div>
+		<div class="choosechr">
+			<h1>请选择 Player 1</h1>
+			<ul>
+				<li><img class="" src="img/batman.png" alt=""><h1>Batman</h1></li>
+				<li><img class="" src="img/superman.png" alt=""><h1>Superman</h1></li>
+				<li><img class="" src="img/green lantern.png" alt=""><h1>Green Lantern</h1></li>
+				<li><img class="" src="img/robin.png" alt=""><h1>Robin</h1></li>
+				<li><img class="" src="img/catwoman.png" alt=""><h1>Catwoman</h1></li>
+				<li><img class="" src="img/harley quinn.png" alt=""><h1>Harley Quinn</h1></li>
+				<li><img class="" src="img/joker.png" alt=""><h1>Joker</h1></li>
+			</ul>
+		</div>
+		<div class="npcnum choosebox">
+			<h1>电脑人数</h1>
+			<ul>
+				<li>0</li>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		<div class="playernum choosebox">
+			<h1>玩家人数</h1>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		
+	</div>
+		
+	<!-- 游戏地图区域 -->
+	<div class="map">
+		<div class="box" id="b26"><h3></h3></div>
+		<div class="box" id="b25"><h3></h3></div>
+		<div class="box" id="b24"><h3></h3></div>
+		<div class="box" id="b23"><h3></h3></div>
+		<div class="box" id="b22"><h3></h3></div>
+		<div class="box" id="b21"><h3></h3></div>
+		<div class="box" id="b20"><h3></h3></div>
+		<div class="box" id="b19"><h3></h3></div>
+		<div class="box" id="b18"><h3></h3></div>
+		<div class="box" id="b17"><h3></h3></div>
+		<div class="box" id="b16"><h3></h3></div>
+		<div class="box" id="b15"><h3></h3></div>
+		<div class="box" id="b27"><h3></h3></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="box" id="b14"><h3></h3></div>
+		<div class="box" id="b28"><h3></h3></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>		
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="box" id="b13"><h3></h3></div>
+		<div class="box" id="b29"><h3></h3></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="hi"></div>
+		<div class="box" id="b12"><h3></h3></div>		
+		<div class="box" id="b0"><h3></h3>
+			<img class="chr" id ="player1" src="" alt="">
+			<img class="chr" id ="player2" src="" alt="">
+			<img class="chr" id ="player3" src="" alt="">
+			<img class="chr" id ="player4" src="" alt="">
+		</div>
+		<div class="box" id="b1"><h3></h3></div>
+		<div class="box" id="b2"><h3></h3></div>
+		<div class="box" id="b3"><h3></h3></div>
+		<div class="box" id="b4"><h3></h3></div>
+		<div class="box" id="b5"><h3></h3></div>
+		<div class="box" id="b6"><h3></h3></div>
+		<div class="box" id="b7"><h3></h3></div>
+		<div class="box" id="b8"><h3></h3></div>
+		<div class="box" id="b9"><h3></h3></div>
+		<div class="box" id="b10"><h3></h3></div>
+		<div class="box" id="b11"><h3></h3></div>
+	</div>
+	<!-- 信息区域 -->
+	<div class="p1info">
+		<h1></h1>
+		<h2></h2>
+	</div>
+	<div class="p2info">
+		<h1></h1>
+		<h2></h2>
+	</div>
+	<div class="p3info">
+		<h1></h1>
+		<h2></h2>
+	</div>
+	<div class="p4info">
+		<h1></h1>
+		<h2></h2>
+	</div>
+	<!-- 骰子区域 -->
+	<div class="control">
+		<h1></h1>
+		<div class="dice"></div>
+	</div>
+	<!-- 隐藏选项区域 -->
+	<div class="hide">
+		<div class="arrow"><img src="img/arrow.png"></div>
+		<div class="construct"><img src="img/c1.png" alt=""><img src="img/c2.png" alt=""><img src="img/c3.png" alt=""><img src="img/c4.png" alt=""><img src="img/c5.png" alt=""></div>
+	</div>
+	<div class="bet">
+		<div class="spcontrol">
+			<div class="spdice"></div>
+		</div>
+	</div>
+	<div class="purchasebox">
+		<h1></h1>
+		<div class="bar"><h2>购买地产</h2></div>
+		<div class="btn1">确定</div>
+		<div class="btn2">取消</div>
+	</div>
+	<div class="upgradebox">
+		<h1></h1>
+		<div class="bar"><h2>升级房子</h2></div>
+		<div class="btn1">确定</div>
+		<div class="btn2">取消</div>
+	</div>
+	<div class="msgbox">
+		<div class="msg"></div>
+	</div>
+	<div class="infobox">
+		<div class="bar"><h2>俄罗斯</h2></div>
+		<ul>
+			<li>地主：</li>
+			<li>价格：</li>
+		</ul>
+	</div>
+	<script src="js/initializing.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/information.js"></script>
+	<script src="js/monopoly.js"></script>
+	<script src="js/msg.js"></script>
+	<script src="js/check.js"></script>
+	
+</body>
+</html>
