@@ -135,7 +135,6 @@ body{
 	grid-template-rows: repeat(5,1fr);
 	grid-gap:3px;
 	overflow: hidden;
-	margin: 3% 5%;
 }
 .box{
 	position: relative;
@@ -366,8 +365,8 @@ body{
 /*显示信息*/
 .p1info{
 	position: absolute;
-	top: 25%;
-	left:15%;
+	top: 20%;
+	left:10%;
 	width:10%;
 	height: 20%;
 	white-space: nowrap;
@@ -389,8 +388,8 @@ body{
 }
 .p2info{
 	position: absolute;
-	bottom: 35%;
-	left:15%;
+	bottom: 30%;
+	left:10%;
 	width:10%;
 	height: 20%;
 	white-space: nowrap;
@@ -412,8 +411,8 @@ body{
 }
 .p3info{
 	position: absolute;
-	top: 25%;
-	right:15%;
+	top: 20%;
+	right:10%;
 	width:10%;
 	height: 20%;
 	white-space: nowrap;
@@ -435,8 +434,8 @@ body{
 }
 .p4info{
 	position: absolute;
-	bottom: 25%;
-	right:15%;
+	bottom: 20%;
+	right:10%;
 	width:10%;
 	height: 20%;
 	white-space: nowrap;

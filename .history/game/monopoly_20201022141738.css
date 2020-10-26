@@ -412,8 +412,8 @@ body{
 }
 .p3info{
 	position: absolute;
-	top: 25%;
-	right:15%;
+	top: 20%;
+	right:10%;
 	width:10%;
 	height: 20%;
 	white-space: nowrap;
@@ -435,8 +435,8 @@ body{
 }
 .p4info{
 	position: absolute;
-	bottom: 25%;
-	right:15%;
+	bottom: 20%;
+	right:10%;
 	width:10%;
 	height: 20%;
 	white-space: nowrap;
