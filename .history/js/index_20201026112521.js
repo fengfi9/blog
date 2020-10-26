@@ -115,7 +115,6 @@
     $.ajax({
         type: "GET", //GET还是POST,不是必须
         url: "../blog/json/article.json",
-        // dataType:"jsonp",
         success: function(data) {
             console.log(data)
         }

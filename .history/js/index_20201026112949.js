@@ -120,4 +120,7 @@
             console.log(data)
         }
     });
+    $.get('../json/article.json', function (data) {
+        console.log(data)
+    })
 });
