@@ -25,17 +25,17 @@
             $(this).attr({ 'data-mark': "false" });
         }
     });
-    // 打字机效果
     $.ajax({
-        type: "GET",
+        type: "GET", //GET还是POST,不是必须
         url: "../blog/json/article.json",
-        dataType:"json",
+        // dataType:"jsonp",
         success: function(data) {
             console.log(data);
             var x = data.length;
             var y = 0;
             var rand = parseInt(Math.random() * (x - y + 1) + y);
             var dataNUm = -1;
+            // 打字机效果
             var timer = setInterval(function(){
                 if(dataNUm < data[rand].cont.length){
                     dataNUm++;

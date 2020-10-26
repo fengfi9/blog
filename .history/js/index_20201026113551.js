@@ -27,7 +27,7 @@
     });
     // 打字机效果
     $.ajax({
-        type: "GET",
+        type: "GET", 
         url: "../blog/json/article.json",
         dataType:"json",
         success: function(data) {

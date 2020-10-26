@@ -27,7 +27,7 @@
     });
     // 打字机效果
     $.ajax({
-        type: "GET",
+        type: "GET", //GET还是POST,不是必须
         url: "../blog/json/article.json",
         dataType:"json",
         success: function(data) {
